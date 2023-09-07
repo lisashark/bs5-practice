@@ -1,4 +1,8 @@
-.header{
-  background: #69F0AE;
-  font-size: 64px;
+.sideBar {
+  width: 100%;
+
+  @include media-breakpoint-up(lg) {
+    width: 296px;
+
+  }
 }
