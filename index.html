@@ -1,69 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>index</title>
-    <script type="module" crossorigin src="/bs5-practice/assets/main-724885c9.js"></script>
-    <link rel="stylesheet" href="/bs5-practice/assets/main-1611e840.css">
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>index</title>
+  <script type="module" crossorigin src="/bs5-practice/assets/index-e631b3cd.js"></script>
+  <link rel="stylesheet" href="/bs5-practice/assets/index-f50a5c38.css">
+</head>
+
+<body>
+
+  <section class="layout d-flex">
+    <header class="py-32 d-flex flex-column justify-content-between bg-bg-gray sticky-top">
     <nav class="siderBar">
-    <div class="logo imgBox"><img src=""></div>
-    <ul class="list-unstyled">
-        <li><a href="" class="d-flex align-items-center"><span
-                    class="material-symbols-rounded">insert_chart</span>Dashboard</li></a>
-    </ul>
-
-
-
-
-
-
-</nav>
-    <h1 class="index-title">我是首頁</h1>
-
-    <div class="card" style="width: 18rem">
-      <img src="/bs5-practice/assets/cat-0c0689ae.jpg" class="card-img-top" alt="cat" />
-      <div class="card-body">
-        <h5 class="card-title">卡片元件</h5>
-        <p class="card-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odit, iusto odio assumenda alias id
-          nobis earum!
-        </p>
-      </div>
-    </div>
-
-    <!-- Modal 按鈕 -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      打開 modal
-    </button>
-
-    <!-- Modal 元件 -->
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal 標題</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">內容</div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-            <button type="button" class="btn btn-primary">確定</button>
-          </div>
+        <a class="logo imgBox mb-32 px-32" href="./index.html"><img
+                src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/053bcf3afe88348b79971d2ea8de28f179cba5c5/week5/logo-ANSWER.svg">
+        </a>
+        <ul class="list-unstyled fw-bold">
+            <li class="mt-26 px-32"><a href="" class="d-flex align-items-center"><span
+                        class="material-symbols-rounded me-16">insert_chart</span>Dashboard</a></li>
+            <li class="mt-26 px-32"><a href="" class="d-flex align-items-center"><span
+                        class="material-symbols-rounded me-16">forum</span>Question</a>
+            </li>
+            <li class="mt-26 px-32"><a href="" class="d-flex align-items-center"><span
+                        class="material-symbols-rounded me-16">assignment</span>Assignment</a>
+            </li>
+            <li class="mt-26 px-32"><a href="" class="d-flex align-items-center"><span
+                        class="material-symbols-rounded me-16">video_library</span>Course</a>
+            </li>
+            <li class="mt-26 px-32 active"><a href="" class="d-flex align-items-center"><span
+                        class="material-symbols-rounded me-16">group</span>Admin</a>
+            </li>
+            <li class="mt-26 px-32"><a href="" class="d-flex align-items-center"><span
+                        class="material-symbols-rounded me-16">settings</span>Settings</a>
+            </li>
+        </ul>
+    </nav>
+    <section class="memberLink px-32 d-flex align-items-center">
+        <div class="imgBox me-16"><img
+                src="https://github.com/hexschool/2022-web-layout-training/blob/main/week5/andychen.jpeg?raw=true">
         </div>
-      </div>
-    </div>
+        <a href="">
+            <p class="fw-bold">Andy Chen</p>
+            <p class="fs-14 text-secondary">andy0401@mail.com</p>
+        </a>
 
-    <footer class="footer">我是 footer</footer>
-    
-  </body>
+    </section>
+</header>      <main class="flex-grow-1">
+        <section class="titleBar p-32 d-flex justify-content-between">
+          <div class="d-flex">
+            <h1 class="me-48">Admin</h1>
+            <button class="btn d-flex align-items-center fw-bold"><span
+                class="material-symbols-rounded me-8 text-primary">add</span> Add New
+              Admin</button>
+          </div>
+          <div class="d-flex">
+            <button class="btn me-26"><span class="material-symbols-rounded">
+                search
+              </span></button>
+            <button class="btn"><span class="material-symbols-rounded filled">
+                notifications_active
+              </span></button>
+          </div>
+
+        </section>
+        <section class="mainContent px-24 pb-32">
+          <table class="table table-hover">
+            <thead class="">
+              <tr class="pt-16 pb-4 border-bottom border-dark border-2">
+                <th scope="col">ID <button class="btn ms-8"><span
+                      class="material-symbols-rounded text-primary fs-14">arrow_downward</span></button></th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Verified</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">#1</th>
+                <td>Emir Wicks</td>
+                <td>emir.wicks@mail.com</td>
+                <td>Yes</td>
+                <td><button class="btn"><span class="material-symbols-rounded me-26">
+                      visibility
+                    </span></button><button class="btn"><span class="material-symbols-rounded">
+                      edit
+                    </span></td></button>
+              </tr>
+              <tr>
+                <th scope="row">#2</th>
+                <td>Zaina Goldsmith</td>
+                <td>zaina.goldsmith@mail.com</td>
+                <td>Yes</td>
+                <td><button class="btn"><span class="material-symbols-rounded me-26">
+                      visibility
+                    </span></button><button class="btn"><span class="material-symbols-rounded">
+                      edit
+                    </span></td></button>
+              </tr>
+              <tr>
+                <th scope="row">#3</th>
+                <td>Mahima Lopez</td>
+                <td>mahima.lopez@mail.com</td>
+                <td>Yes</td>
+                <td><button class="btn"><span class="material-symbols-rounded me-26">
+                      visibility
+                    </span></button><button class="btn"><span class="material-symbols-rounded">
+                      edit
+                    </span></td></button>
+              </tr>
+              <tr>
+                <th scope="row">#4</th>
+                <td>Pharrell Murray</td>
+                <td>pharrell.murray@mail.com</td>
+                <td>Yes</td>
+                <td><button class="btn"><span class="material-symbols-rounded me-26">
+                      visibility
+                    </span></button><button class="btn"><span class="material-symbols-rounded">
+                      edit
+                    </span></td></button>
+              </tr>
+              <tr>
+                <th scope="row">#5</th>
+                <td>Annika Mcbride</td>
+                <td>annika.mcbride@mail.com</td>
+                <td>Yes</td>
+                <td><button class="btn"><span class="material-symbols-rounded me-26">
+                      visibility
+                    </span></button><button class="btn"><span class="material-symbols-rounded">
+                      edit
+                    </span></td></button>
+              </tr>
+              <tr>
+                <th scope="row">#6</th>
+                <td>Fatimah Clark</td>
+                <td>fatimah.clark@mail.com</td>
+                <td>Yes</td>
+                <td><button class="btn"><span class="material-symbols-rounded me-26">
+                      visibility
+                    </span></button><button class="btn"><span class="material-symbols-rounded">
+                      edit
+                    </span></td></button>
+              </tr>
+              <tr>
+                <th scope="row">#7</th>
+                <td>Klaudia Rhodes</td>
+                <td>klaudia.rhodes@mail.com</td>
+                <td>Yes</td>
+                <td><button class="btn"><span class="material-symbols-rounded me-26">
+                      visibility
+                    </span></button><button class="btn"><span class="material-symbols-rounded">
+                      edit
+                    </span></td></button>
+              </tr>
+              <tr>
+                <th scope="row">#8</th>
+                <td>Tillie Lucero</td>
+                <td>tillie.lucero@mail.com</td>
+                <td>Yes</td>
+                <td><button class="btn"><span class="material-symbols-rounded me-26">
+                      visibility
+                    </span></button><button class="btn"><span class="material-symbols-rounded">
+                      edit
+                    </span></td></button>
+              </tr>
+              <tr>
+                <th scope="row">#9</th>
+                <td>Sabrina Stephenson</td>
+                <td>sabrina.stephenson@mail.com</td>
+                <td>Yes</td>
+                <td><button class="btn"><span class="material-symbols-rounded me-26">
+                      visibility
+                    </span></button><button class="btn"><span class="material-symbols-rounded">
+                      edit
+                    </span></td></button>
+              </tr>
+              <tr>
+                <th scope="row">#10</th>
+                <td>Annie Smith</td>
+                <td>annie.smith@mail.com</td>
+                <td>Yes</td>
+                <td><button class="btn"><span class="material-symbols-rounded me-26">
+                      visibility
+                    </span></button><button class="btn"><span class="material-symbols-rounded">
+                      edit
+                    </span></td></button>
+              </tr>
+            </tbody>
+          </table>
+          <div class="pageNav mt-64">
+            <ul class="d-flex list-unstyled mb-0 justify-content-end">
+              <li><button class="btn px-4">
+                  <span class="material-symbols-rounded">
+                    chevron_left
+                  </span>
+                </button></li>
+              <li><button class="btn px-12 py-6">1</button></li>
+              <li><button class="btn px-12 py-6 active">2</button></li>
+              <li><button class="btn px-12 py-6">3</button></li>
+              <li><button class="btn px-4">
+                  <span class="material-symbols-rounded">
+                    chevron_right
+                  </span>
+                </button></li>
+            </ul>
+          </div>
+        </section>
+        
+</body>
+
 </html>
