@@ -287,7 +287,7 @@ $cyans: (
 
 // scss-docs-start theme-color-variables
 $primary: #198754;
-$secondary: $gray-600 !default;
+$secondary: #6C757D;
 $success: $green !default;
 $info: $cyan !default;
 $warning: $yellow !default;
@@ -305,7 +305,9 @@ $theme-colors: (
   "warning": $warning,
   "danger": $danger,
   "light": $light,
-  "dark": $dark) !default;
+  "dark": $dark,
+  "bg-gray":#F8F9FA
+);
 // scss-docs-end theme-colors-map
 
 // Characters which are escaped by the escape-svg function
@@ -358,15 +360,23 @@ $gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
 // You can add more entries to the $spacers map, should you need more variation.
 
 // scss-docs-start spacer-variables-maps
-$spacer: 1rem !default;
+$spacer: 0;
 $spacers: (
   0: 0,
-  1: $spacer * .25,
-  2: $spacer * .5,
-  3: $spacer,
-  4: $spacer * 1.5,
-  5: $spacer * 3,
-  ) !default;
+  4:4px,
+  6:6px,
+  8:8px,
+  10:10px,
+  12:12px,
+  16:16px,
+  18:18px,
+  20: 20px,
+  24:24px,
+  26:26px,
+  32:32px,
+  48:48px,
+  64:64px
+);
 // scss-docs-end spacer-variables-maps
 
 // Position
@@ -384,7 +394,7 @@ $position-values: (
 //
 // Settings for the `<body>` element.
 
-$body-bg: $white !default;
+$body-bg: $white;
 $body-color: $gray-900 !default;
 $body-text-align: null !default;
 
@@ -392,10 +402,10 @@ $body-text-align: null !default;
 //
 // Style anchor elements.
 
-$link-color: $primary !default;
+$link-color: $body-color;
 $link-decoration: none;
 $link-shade-percentage: 20% !default;
-$link-hover-color: shift-color($link-color, $link-shade-percentage) !default;
+$link-hover-color: $primary;
 $link-hover-decoration: null !default;
 
 $stretched-link-pseudo-element: after !default;
@@ -405,7 +415,7 @@ $stretched-link-z-index: 1 !default;
 //
 // Style p element.
 
-$paragraph-margin-bottom: 1rem !default;
+$paragraph-margin-bottom: 0;
 
 
 // Grid breakpoints
@@ -569,7 +579,7 @@ $line-height-base: 1.5 !default;
 $line-height-sm: 1.25 !default;
 $line-height-lg: 2 !default;
 
-$h1-font-size: $font-size-base * 2.5 !default;
+$h1-font-size: 24px;
 $h2-font-size: $font-size-base * 2 !default;
 $h3-font-size: $font-size-base * 1.75 !default;
 $h4-font-size: $font-size-base * 1.5 !default;
@@ -579,7 +589,10 @@ $h6-font-size: $font-size-base !default;
 
 // scss-docs-start font-sizes
 $font-sizes: (
-  1: $h1-font-size,
+  24: 24px,
+  16:16px,
+  14:14px,
+  12:12px,
   2: $h2-font-size,
   3: $h3-font-size,
   4: $h4-font-size,
@@ -591,15 +604,17 @@ $font-sizes: (
 $headings-margin-bottom: $spacer * .5 !default;
 $headings-font-family: null !default;
 $headings-font-style: null !default;
-$headings-font-weight: 500 !default;
+$headings-font-weight: $font-weight-bold;
 $headings-line-height: 1.2 !default;
 $headings-color: null !default;
 // scss-docs-end headings-variables
 
 // scss-docs-start display-headings
 $display-font-sizes: (
-  1: 5rem,
-  2: 4.5rem,
+  24: 24px,
+  16:16px,
+  14:14px,
+  12:12px,
   3: 4rem,
   4: 3.5rem,
   5: 3rem,
@@ -658,8 +673,8 @@ $mark-bg: $yellow-100 !default;
 // Customizes the `.table` component with basic values, each used across all table variations.
 
 // scss-docs-start table-variables
-$table-cell-padding-y: .5rem !default;
-$table-cell-padding-x: .5rem !default;
+$table-cell-padding-y: 18px;
+$table-cell-padding-x: 0;
 $table-cell-padding-y-sm: .25rem !default;
 $table-cell-padding-x-sm: .25rem !default;
 
@@ -669,7 +684,7 @@ $table-color: var(--#{$prefix}body-color) !default;
 $table-bg: transparent !default;
 $table-accent-bg: transparent !default;
 
-$table-th-font-weight: null !default;
+$table-th-font-weight: $font-weight-bold;
 
 $table-striped-color: $table-color !default;
 $table-striped-bg-factor: .05 !default;
@@ -681,11 +696,11 @@ $table-active-bg: rgba($black, $table-active-bg-factor) !default;
 
 $table-hover-color: $table-color !default;
 $table-hover-bg-factor: .075 !default;
-$table-hover-bg: rgba($black, $table-hover-bg-factor) !default;
+$table-hover-bg: #F8F9FA;
 
 $table-border-factor: .1 !default;
 $table-border-width: $border-width !default;
-$table-border-color: var(--#{$prefix}border-color) !default;
+$table-border-color: #CED4DA;
 
 $table-striped-order: odd !default;
 $table-striped-columns-order: even !default;
@@ -716,11 +731,11 @@ $table-variants: (
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
 // scss-docs-start input-btn-variables
-$input-btn-padding-y: .375rem !default;
-$input-btn-padding-x: .75rem !default;
+$input-btn-padding-y: 0;
+$input-btn-padding-x: 0;
 $input-btn-font-family: null !default;
 $input-btn-font-size: $font-size-base !default;
-$input-btn-line-height: $line-height-base !default;
+$input-btn-line-height: 1;
 
 $input-btn-focus-width: .25rem !default;
 $input-btn-focus-color-opacity: .25 !default;
@@ -736,7 +751,7 @@ $input-btn-padding-y-lg: .5rem !default;
 $input-btn-padding-x-lg: 1rem !default;
 $input-btn-font-size-lg: $font-size-lg !default;
 
-$input-btn-border-width: $border-width !default;
+$input-btn-border-width: 0px;
 // scss-docs-end input-btn-variables
 
 
@@ -775,7 +790,7 @@ $btn-link-hover-color: var(--#{$prefix}link-hover-color) !default;
 $btn-link-disabled-color: $gray-600 !default;
 
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius: $border-radius !default;
+$btn-border-radius: 0px;
 $btn-border-radius-sm: $border-radius-sm !default;
 $btn-border-radius-lg: $border-radius-lg !default;
 
